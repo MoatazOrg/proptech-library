@@ -1,0 +1,13 @@
+[project]
+name = "proptech"
+version = "0.1.0"
+description = "Minimal real-estate data model + loaders + trivial features"
+requires-python = ">=3.10"
+dependencies = [
+  "SQLAlchemy>=2.0",
+  "psycopg2-binary>=2.9",
+  "python-dotenv>=1.0",
+]
+
+[tool.pyright]
+typeCheckingMode = "basic"
