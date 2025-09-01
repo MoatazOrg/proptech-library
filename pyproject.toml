@@ -1,13 +1,15 @@
-[project]
-name = "proptech"
-version = "0.1.0"
-description = "Minimal real-estate data model + loaders + trivial features"
-requires-python = ">=3.10"
-dependencies = [
-  "SQLAlchemy>=2.0",
-  "psycopg2-binary>=2.9",
-  "python-dotenv>=1.0",
-]
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
 
-[tool.pyright]
-typeCheckingMode = "basic"
+[project]
+name = "proptech-library"
+version = "0.1.0"
+description = "PropTech core library"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["proptech*"]     # only include the real package
+exclude = ["sql*", "tests*"]
